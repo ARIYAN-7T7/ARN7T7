@@ -1,15 +1,16 @@
 <div align="center">
+<div align="center">
 
 ```
-██╗    ██╗██╗███████╗██╗   ██╗██╗  ██╗
-██║    ██║██║██╔════╝██║   ██║╚██╗██╔╝
-██║ █╗ ██║██║█████╗  ██║   ██║ ╚███╔╝
-██║███╗██║██║██╔══╝  ██║   ██║ ██╔██╗
-╚███╔███╔╝██║██║     ╚██████╔╝██╔╝ ██╗
- ╚══╝╚══╝ ╚═╝╚═╝      ╚═════╝ ╚═╝  ╚═╝
-```
+ █████╗ ██████╗ ███╗   ██╗
+██╔══██╗██╔══██╗████╗  ██║
+███████║██████╔╝██╔██╗ ██║
+██╔══██║██╔══██╗██║╚██╗██║
+██║  ██║██║  ██║██║ ╚████║
+╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═══╝
 
-**WiFuX v2.0** — WPS Security Auditing Tool for Android / Termux
+
+**ARN7T7 v2.0 — WPS Security Auditing Tool for Android / Termux
 
 [![Version](https://img.shields.io/badge/version-2.0-brightgreen)](https://github.com/msrofficial/WiFuX/releases)
 [![Platform](https://img.shields.io/badge/platform-Android%20%2F%20Termux-blue)](https://termux.dev)
@@ -21,49 +22,42 @@
 ---
 
 ## Overview
+​ARN7T7 is a WPS (Wi-Fi Protected Setup) security auditing tool built for Android devices running Termux. It automates Pixie Dust and Bruteforce attacks against WPS-enabled routers, allowing security researchers and network administrators to evaluate the strength of their own wireless infrastructure.
+​ARN7T7 v2.0 is a complete rewrite of the original v1 engine, introducing a global command system, session management, reporting, improved stability, and a built-in interactive help guide — all optimized for Android / Termux.
+​This tool is intended for authorized security testing only. Only use it on networks you own or have explicit permission to test.
+​<div align="center">
 
-WiFuX is a WPS (Wi-Fi Protected Setup) security auditing tool built for Android devices running Termux. It automates Pixie Dust and Bruteforce attacks against WPS-enabled routers, allowing security researchers and network administrators to evaluate the strength of their own wireless infrastructure.
-
-WiFuX v2.0 is a complete rewrite of the original v1 engine, introducing a global command system, session management, reporting, improved stability, and a built-in interactive help guide — all optimized for Android / Termux.
-
-> This tool is intended for authorized security testing only. Only use it on networks you own or have explicit permission to test.
-
----
-<div align="center">
-
-[![Support this project](https://img.shields.io/badge/Support%20this%20project-FFD700?style=for-the-badge&logo=ko-fi&logoColor=black)](https://www.supportkori.com/msrsakibur)
- 
-  <a href="https://youtu.be/Y73jDqTqkxI">
-    <img src="https://img.shields.io/badge/wifux_full_setup_video_tutorial-2EA043?style=for-the-badge&logo=android&logoColor=white" alt="WiFuX Full Setup Video Tutorial">
-  </a><br> </div>
+[![Support this project](htSupport this project
+​<a href="https://www.youtube.com/@ariyan_7t7">
+<img src="https://img.shields.io/badge/ARN7T7_full_setup_video_tutorial-2EA043?style=for-the-badge&logo=android&logoColor=white" alt="ARN7T7 Full Setup Video Tutorial">
+</a>
+ </div>
 
 ## Requirements
-
-- Android device with root access (Magisk or KernelSU)
-- [Termux](https://f-droid.org/en/packages/com.termux/) installed (from fdroid. not from playstore)
-- Root-capable WiFi adapter (internal wlan0 or external)
+​Android device with root access (Magisk or KernelSU)
+​Termux installed (from fdroid. not from playstore)
+​Root-capable WiFi adapter (internal wlan0 or external)
 
 ---
 
 ## Installation
-
-WiFuX v2.0 installs globally. Once set up, you can run it from any directory using the `wifux` command.
+​ARN7T7 v2.0 installs globally. Once set up, you can run it from any directory using the arn command.
 
 ### Method 1 — One Command (Recommended)
 
 ```bash
-curl -sLo installer.sh https://raw.githubusercontent.com/msrofficial/WiFuX/main/installer.sh && bash installer.sh
+curl -sLo installer.sh https://raw.githubusercontent.com/ARIYAN-7T7/ARN7T7/main/installer.sh && bash installer.sh
 ```
 
-This will automatically update packages, install all dependencies, clone the repository, and register the `wifux` global command.
+This will automatically update packages, install all dependencies, clone the repository, and register the arn global command.
 
 ### Method 2 — Manual
 
 ```bash
 pkg update && pkg upgrade -y
 pkg install root-repo git tsu python wpa-supplicant pixiewps iw -y
-git clone https://github.com/msrofficial/WiFuX
-cd WiFuX
+git clone [https://github.com/ARIYAN-7T7/ARN7T7.git](https://github.com/ARIYAN-7T7/ARN7T7.git)
+cd ARN7T7
 chmod +x install.sh
 bash install.sh
 ```
@@ -72,52 +66,50 @@ bash install.sh
 
 ## Commands
 
-| Command | Description |
-|---|---|
-| `wifux` | Run WiFuX with default settings (wlan0 + Pixie Dust) |
-| `wifux menu` | Open WiFuX interactive menu without auto-attack |
-| `wifux old` | Run the legacy engine (w1.py) with wlan0 |
-| `wifux update` | Pull latest updates from GitHub |
-| `wifux help` | Open the built-in interactive help guide |
-| `wifux fix` | Fix root / superuser issues |
-| `wifux contact` | Contact the developer |
-
+| Command | Description
+arnRun ARN7T7 with default settings (wlan0 + Pixie Dust)
+arn menuOpen ARN7T7 interactive menu without auto-attack
+arn oldRun the legacy engine (w1.py) with wlan0
+arn updatePull latest updates from GitHub
+arn helpOpen the built-in interactive help guide
+arn fixFix root / superuser issues
+arn contactContact the developer
 ---
 
 ## Usage
 
-**Default run — scan nearby networks and attack:**
+**​Default run — scan nearby networks and attack:**
 ```bash
-wifux
+arn
 ```
 
 **Pixie Dust on a specific router:**
 ```bash
-wifux -i wlan0 -b <BSSID> -K
+arn -i wlan0 -b <BSSID> -K
 ```
 
 **Bruteforce on a specific router:**
 ```bash
-wifux -i wlan0 -b <BSSID> -B
+arn -i wlan0 -b <BSSID> -B
 ```
 
 **Pixie Dust without touching Android WiFi settings:**
 ```bash
-wifux -i wlan0 -K --dts
+arn -i wlan0 -K --dts
 ```
 
 **Resume a previous session:**
 ```bash
-wifux --list-sessions
+arn --list-sessions
 wifux -i wlan0 --resume-session <BSSID>
 ```
 
 **Generate an HTML report:**
 ```bash
-wifux -i wlan0 -b <BSSID> -K --html-report
+arn -i wlan0 -b <BSSID> -K --html-report
 ```
 
-For the full argument reference, run `wifux help` and select option 5.
+For the full argument reference, run `arn help` and select option 5.
 
 ---
 
@@ -127,12 +119,12 @@ For the full argument reference, run `wifux help` and select option 5.
 
 Run the built-in fix first:
 ```bash
-wifux fix
+arn fix
 ```
 
 If the issue persists, use the dedicated fix script:
 ```bash
-curl -sO https://raw.githubusercontent.com/msrofficial/fix-termux-root/main/fix.sh && chmod +x fix.sh && ./fix.sh
+curl -sO [https://raw.githubusercontent.com/ARIYAN-7T7/fix-termux-root/main/fix.sh](https://raw.githubusercontent.com/ARIYAN-7T7/fix-termux-root/main/fix.sh) && chmod +x fix.sh && ./fix.sh
 ```
 
 Manual solutions: [github.com/msrofficial/fix-termux-root](https://github.com/msrofficial/fix-termux-root)
